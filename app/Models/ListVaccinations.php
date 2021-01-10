@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class ListVaccinations extends Model
 {
-    use HasFactory;
+    protected $table = 'list_vaccinations';
+
+    public function pets()
+    {
+        return $this->hasMany('App\Pet');
+    }
 }

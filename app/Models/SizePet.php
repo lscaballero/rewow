@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class SizePet extends Model
 {
-    use HasFactory;
+    protected $table = 'size_pet';
+
+    public function pets()
+    {
+        return $this->hasMany('App\Pet');
+    }
 }

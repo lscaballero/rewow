@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class CategoryAppointment extends Model
 {
-    use HasFactory;
+    protected $table = 'category_appointments';
+
+    public function list_appointments()
+    {
+        return $this->hasMany('App\ListAppointment');
+    }
 }

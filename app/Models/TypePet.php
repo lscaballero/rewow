@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class TypePet extends Model
 {
-    use HasFactory;
+    protected $table = 'type_pet';
+
+    public function pets()
+    {
+        return $this->hasMany('App\Pet');
+    }
 }
