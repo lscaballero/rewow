@@ -11,11 +11,11 @@ class ListAppointment extends Model
 
     public function appointments()
     {
-        return $this->hasMany('App\Appointment');
+        return $this->hasMany('App\Models\Appointment');
     }
 
     public function category_appointments()
     {
-        return $this->belongsTo('App\CategoryAppointment', 'category_appointments_id');
+        return $this->belongsTo('App\Models\CategoryAppointment', 'category_appointments_id');
     }
 }

@@ -11,11 +11,11 @@ class BuyProduct extends Model
 
     public function pets()
     {
-        return $this->belongsTo('App\Pets', 'pet_id');
+        return $this->belongsTo('App\Models\Pets', 'pet_id');
     }
 
     public function products()
     {
-        return $this->belongsTo('App\Prduct', 'product_id');
+        return $this->belongsTo('App\Models\Prduct', 'product_id');
     }
 }

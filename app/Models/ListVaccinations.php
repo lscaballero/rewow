@@ -11,6 +11,6 @@ class ListVaccinations extends Model
 
     public function pets()
     {
-        return $this->hasMany('App\Pet');
+        return $this->hasMany('App\Models\Pet');
     }
 }

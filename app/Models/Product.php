@@ -11,11 +11,11 @@ class Product extends Model
 
     public function buy_products()
     {
-        return $this->hasMany('App\BuyProduct');
+        return $this->hasMany('App\Models\BuyProduct');
     }
 
     public function category_products()
     {
-        return $this->belongsTo('App\CategoryProduct', 'category_product_id');
+        return $this->belongsTo('App\Models\CategoryProduct', 'category_product_id');
     }
 }

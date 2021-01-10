@@ -11,11 +11,11 @@ class Appointment extends Model
 
     public function list_appointments()
     {
-        return $this->belongsTo('App\ListAppointment', 'list_appointments_id');
+        return $this->belongsTo('App\Models\ListAppointment', 'list_appointments_id');
     }
 
     public function pets()
     {
-        return $this->belongsTo('App\Pet', 'pet_id');
+        return $this->belongsTo('App\Models\Pet', 'pet_id');
     }
 }

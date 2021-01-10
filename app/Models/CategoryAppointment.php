@@ -11,6 +11,6 @@ class CategoryAppointment extends Model
 
     public function list_appointments()
     {
-        return $this->hasMany('App\ListAppointment');
+        return $this->hasMany('App\Models\ListAppointment');
     }
 }
