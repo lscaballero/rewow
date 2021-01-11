@@ -20,3 +20,6 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//usuarios
+Route::get('/profile', 'App\Http\Controllers\UserController@profile')->name('profile');
+Route::post('/user/update', 'App\Http\Controllers\UserController@update')->name('user.update');
