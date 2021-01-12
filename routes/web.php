@@ -21,5 +21,10 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //usuarios
-Route::get('/profile', 'App\Http\Controllers\UserController@profile')->name('profile');
+Route::get('/perfil', 'App\Http\Controllers\UserController@profile')->name('profile');
 Route::post('/user/update', 'App\Http\Controllers\UserController@update')->name('user.update');
+//mascotas
+Route::get('/mascotas', 'App\Http\Controllers\PetsController@list')->name('pet.list');
+Route::get('/crear-mascota', 'App\Http\Controllers\PetsController@create')->name('pet.create');
+Route::post('/pet/save', 'App\Http\Controllers\PetsController@save')->name('pet.save');
+Route::get('/pet/image/{filename}', 'App\Http\Controllers\PetsController@getImagePet')->name('pet.image');

@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function profile()
     {
         return view('user.profile');
@@ -19,6 +25,7 @@ class UserController extends Controller
      */
     public function update(Request $request)
     {
+
         //traer usuario
         $user = \Auth::user();
         $id = $user->id;
